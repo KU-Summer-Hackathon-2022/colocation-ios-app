@@ -24,17 +24,19 @@ class WebViewController: UIViewController {
     }
     
     // MARK: - Views
-    let webView = WKWebView()
     let rightBarButton = UIBarButtonItem(
         title: nil,
         image: UIImage(systemName: "heart"),
         primaryAction: nil,
         menu: nil
     )
+    let webView = WKWebView()
+    let applyButton = UIButton()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = ColorSet.AppColor.primary
         
         setupNavigationBar()
         setupWebView()
@@ -46,28 +48,40 @@ class WebViewController: UIViewController {
     private func bind() {
         self.navigationItem.rightBarButtonItem?.rx.tap
             .bind { [weak self] _ in
-                print("dsasdfg 🥳🥳🥳 \(self?.urlString)")
-                
                 let id = self?.urlString.components(separatedBy: "/").last!
-                print("dsasdfg 🥳🥳🥳 asdf id \(id)")
-                var bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
                 
                 if self?.rightBarButton.image == UIImage(systemName: "heart.fill") {
-                    print("🥳 fill true")
                     self?.rightBarButton.image = UIImage(systemName: "heart")
                     self?.bookmarks.removeAll { target in
                         target == "\(id!)"
                     }
                 } else {
-                    print("🥳fill false")
                     self?.rightBarButton.image = UIImage(systemName: "heart.fill")
                     self?.bookmarks.append("\(id!)")
                 }
                 
-                print("-: ->\(UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark))")
-                
             }
             .disposed(by: disposeBag)
+        
+        applyButton.rx.tap
+            .bind { [weak self] _ in
+                let alertController = UIAlertController(
+                    title: "😲 신청이 완료되었어요.",
+                    message: "신청 수락 여부는 마이페이지에서 확인할 수 있어요.",
+                    preferredStyle: .alert
+                )
+                let confirmAction = UIAlertAction(title: "확인", style: .default) { _ in
+                    self?.applyButton.isEnabled = false
+                    self?.applyButton.backgroundColor = .gray
+                    self?.applyButton.setTitle("🙌🏻 신청완료!", for: .disabled)
+                    self?.view.backgroundColor = .gray
+                }
+                
+                alertController.addAction(confirmAction)
+                self?.present(alertController, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
     }
     
     private func setupNavigationBar() {
@@ -85,9 +99,20 @@ class WebViewController: UIViewController {
     
     private func setupWebView() {
         view.addSubview(webView)
-        
         webView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.leading.trailing.top.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        webView.addSubview(applyButton)
+        
+        applyButton.setTitle("신청하기", for: .normal)
+        
+        applyButton.backgroundColor = ColorSet.AppColor.primary
+        applyButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(40)
         }
     }
     
