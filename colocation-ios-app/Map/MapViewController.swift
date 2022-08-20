@@ -43,23 +43,39 @@ class MapViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
         
-        listButton.setImage(UIImage(systemName: "list.triangle"), for: .normal)
-        listButton.setTitle(" 목록보기", for: .normal)
-        listButton.setTitleColor(.darkGray, for: .normal)
-        listButton.backgroundColor = .green
-        listButton.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(100)
-            $0.trailing.equalToSuperview().inset(30)
-        }
-
-        mypageButton.setImage(UIImage(systemName: "person.circle"), for: .normal)
-        mypageButton.setTitle(" 마이페이지", for: .normal)
+        // MARK: - mypageButton
+        var imageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .light)
+        var image = UIImage(systemName: "person.circle", withConfiguration: imageConfig)
+        
+        mypageButton.setImage(image, for: .normal)
         mypageButton.setTitleColor(.darkGray, for: .normal)
-        mypageButton.backgroundColor = .green
+        mypageButton.backgroundColor = ColorSet.AppColor.secondary
+        mypageButton.tintColor = ColorSet.AppColor.tertiary
+        
         mypageButton.snp.makeConstraints {
-            $0.top.equalTo(listButton.snp.bottom).offset(20)
-            $0.trailing.equalToSuperview().inset(30)
+            $0.top.equalToSuperview().offset(80)
+            $0.trailing.equalToSuperview().inset(20)
+            $0.height.width.equalTo(50)
         }
+        mypageButton.layer.cornerRadius = 25
+        mypageButton.clipsToBounds = true
+        
+        
+        // MARK: - listButton
+        imageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .light)
+        image = UIImage(systemName: "list.triangle", withConfiguration: imageConfig)
+        
+        listButton.setImage(image, for: .normal)
+        listButton.setTitleColor(.darkGray, for: .normal)
+        listButton.backgroundColor = ColorSet.AppColor.secondary
+        listButton.tintColor = ColorSet.AppColor.tertiary
+        listButton.snp.makeConstraints {
+            $0.top.equalTo(mypageButton.snp.bottom).offset(20)
+            $0.trailing.equalToSuperview().inset(20)
+            $0.height.width.equalTo(50)
+        }
+        listButton.layer.cornerRadius = 25
+        listButton.clipsToBounds = true
         
     }
     

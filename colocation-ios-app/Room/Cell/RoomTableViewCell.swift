@@ -40,6 +40,7 @@ class RoomTableViewCell: UITableViewCell {
         priceLabel.text = item.price
         adressLabel.text = item.address
         typeLabel.text = item.type
+        
         updateLikeButton()
     }
     
@@ -54,7 +55,7 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     private func updateLikeButton() {
-        var bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
+        let bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
         
         if bookmarks.contains(self.roomId) {
             likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
