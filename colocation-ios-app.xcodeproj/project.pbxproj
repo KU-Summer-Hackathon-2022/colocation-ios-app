@@ -26,6 +26,7 @@
 		B1C5419228AFE2D300DE2E32 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5419128AFE2D300DE2E32 /* Map.swift */; };
 		B1C5419628AFEBAC00DE2E32 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5419528AFEBAC00DE2E32 /* Annotation.swift */; };
 		B1C5419828AFEBC100DE2E32 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5419728AFEBC100DE2E32 /* AnnotationView.swift */; };
+		B1E157F128B05D1500CACD60 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157F028B05D1500CACD60 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B1C5419128AFE2D300DE2E32 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B1C5419528AFEBAC00DE2E32 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		B1C5419728AFEBC100DE2E32 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		B1E157F028B05D1500CACD60 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				B1C5419128AFE2D300DE2E32 /* Map.swift */,
 				B1C5419528AFEBAC00DE2E32 /* Annotation.swift */,
 				B1C5419728AFEBC100DE2E32 /* AnnotationView.swift */,
+				B1E157F028B05D1500CACD60 /* MapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				B1C5418D28AFC13000DE2E32 /* AuthViewController.swift in Sources */,
 				B1C5418F28AFE21800DE2E32 /* StringSet.swift in Sources */,
 				B1C5419828AFEBC100DE2E32 /* AnnotationView.swift in Sources */,
+				B1E157F128B05D1500CACD60 /* MapViewController.swift in Sources */,
 				B1C5416328AFB7B900DE2E32 /* AppDelegate.swift in Sources */,
 				B1A5B19628B0058B00AD58E4 /* NSObject+.swift in Sources */,
 				B1C5419628AFEBAC00DE2E32 /* Annotation.swift in Sources */,
