@@ -164,26 +164,14 @@ extension MapViewController {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let title = view.annotation?.title
+        let annotation = view.annotation!
         
-        serverRooms.forEach { room in    
-            if room.address == title {
+        serverRooms.forEach { room in
+            if room.address == annotation.title {
                 annotationId = room.id
             }
         }
-        
+        mapView.setCenter(annotation.coordinate, animated: true)
         showWebViewController("https://shareroof.netlify.app/houses/\(annotationId)")
-    }
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        print("🍁 annotation.title")
-        
-        
-        return nil
-    }
-    
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("👉 calloutAccessoryControlTapped")
-    }
-    
+    }    
 }
