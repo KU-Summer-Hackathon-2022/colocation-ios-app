@@ -115,6 +115,7 @@ class RoomTableViewCell: UITableViewCell {
         adressLabel.snp.makeConstraints {
             $0.bottom.equalTo(typeLabel.snp.top).offset(-5)
             $0.leading.equalTo(thumbnailImageView.snp.trailing).offset(10)
+            $0.trailing.equalToSuperview().inset(40)
         }
         
         likeButton.setImage(UIImage(systemName: "heart"), for: .normal)

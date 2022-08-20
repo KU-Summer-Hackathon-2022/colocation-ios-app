@@ -10,7 +10,9 @@ import UIKit
 extension UIViewController {
     /// 웹뷰를 보여줍니다.
     func showWebViewController(_ urlString: String) {
-        let nav = UINavigationController(rootViewController: WebViewController())
+        let webViewController = WebViewController()
+        webViewController.urlString = urlString
+        let nav = UINavigationController(rootViewController: webViewController)
         nav.modalPresentationStyle = .pageSheet
         if let sheet = nav.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
