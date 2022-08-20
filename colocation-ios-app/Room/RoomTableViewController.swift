@@ -13,7 +13,7 @@ import RxCocoa
 class RoomTableViewController: UIViewController {
     
     // MARK: - Properties
-    var rooms: [Room] = Room.Rooms
+    var rooms: [Room] = Room.makeServerRooms()
     
     // MARK: - Views
     let tableView = UITableView()

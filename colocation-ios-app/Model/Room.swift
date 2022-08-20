@@ -90,7 +90,7 @@ extension Room {
             let address = "\(strings[1])"
             let latitudeValue = "\(strings[2])"
             let longitudeValue = "\(strings[3])"
-            let imageString = ""
+            let imageString = "\(id)_0.PNG"
             let gender = "\(strings[5])"
             let type = "\(strings[6])"
             let roomSize = "\(strings[7])"

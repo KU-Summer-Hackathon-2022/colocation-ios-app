@@ -36,7 +36,7 @@ class RoomTableViewCell: UITableViewCell {
     
     func setUI(item: Room) {
         roomId = item.id
-        thumbnailImageView.image = UIImage(named: "item.imageString")
+        thumbnailImageView.image = UIImage(named: item.imageString)
         priceLabel.text = item.price
         adressLabel.text = item.address
         typeLabel.text = item.type
