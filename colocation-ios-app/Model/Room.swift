@@ -36,7 +36,6 @@ struct Room: Equatable {
     var isToiletShare: String // 화장실 공용 여부
     var bedCount: String // 침대 갯수
     var isCarShare: String // 카쉐어링 여부
-    var headCopy: String // 한줄
     var description: String = "" // 설명
     
     var isLike: Bool = false // 좋아요 여부
@@ -54,7 +53,6 @@ struct Room: Equatable {
         isToiletShare: String,
         bedCount: String,
         isCarShare: String,
-        headCopy: String = "",
         description: String = "",
         isLike: Bool = false
         
@@ -71,7 +69,6 @@ struct Room: Equatable {
         self.isToiletShare = isToiletShare
         self.bedCount = bedCount
         self.isCarShare = isCarShare
-        self.headCopy = headCopy
         self.description = description
         self.isLike = isLike
     }
@@ -101,10 +98,9 @@ extension Room {
             let isToiletShare = "\(strings[9])"
             let bedCount = "\(strings[10])"
             let isCarShare = "\(strings[11])"
-            let headCopy = "\(strings[12])"
-            let description = "\(strings[13])"
+            let description = "\(strings[12])"
             
-            let room = Room(id: id, address: address, latitudeValue: latitudeValue, longitudeValue: longitudeValue, imageString: imageString, gender: gender, type: type, roomSize: roomSize, price: price, isToiletShare: isToiletShare, bedCount: bedCount, isCarShare: isCarShare, headCopy: headCopy, description: description)
+            let room = Room(id: id, address: address, latitudeValue: latitudeValue, longitudeValue: longitudeValue, imageString: imageString, gender: gender, type: type, roomSize: roomSize, price: price, isToiletShare: isToiletShare, bedCount: bedCount, isCarShare: isCarShare, description: description)
             
             result.append(room)
         }

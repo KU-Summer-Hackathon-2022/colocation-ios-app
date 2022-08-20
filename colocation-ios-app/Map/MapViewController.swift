@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     
     // MARK: - Properties
     let locationManager = CLLocationManager()
+    let serverRooms: [Room] = Room.makeServerRooms()
     
     // MARK: - Views
     let mapView = MKMapView()
@@ -28,9 +29,19 @@ class MapViewController: UIViewController {
         bind()
         
         locationManager.startUpdatingLocation()
-        
         addAnnotation(latitudeValue: 37.556876, longitudeValue: 126.914066, delta: 0.1, title: "이지 퍼블리싱", subtitle: "서울시 마포구 잔다리로 109 이지스 빌딩")
         addAnnotation(latitudeValue: 37.5433183958374, longitudeValue: 127.08835455546703, delta: 0.1, title: "자취방", subtitle: "서울시 광진구 자양로 30길 63")
+        
+        setupAnnotation()
+    }
+    
+    /// serverRooms 정보를 가지고 어노테이션을 설정
+    func setupAnnotation() {
+        serverRooms.forEach { room in
+            let latitudeValue: Double = Double(room.latitudeValue)!
+            let longitudeValue: Double = Double(room.longitudeValue)!
+            addAnnotation(latitudeValue: latitudeValue, longitudeValue: longitudeValue, delta: 0.1, title: room.address, subtitle: room.type)
+        }
     }
     
     func setupViews() {
