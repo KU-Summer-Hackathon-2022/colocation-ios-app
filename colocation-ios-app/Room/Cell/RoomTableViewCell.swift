@@ -54,7 +54,6 @@ class RoomTableViewCell: UITableViewCell {
     
     private func bookmark() {
         var bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
-        print("current \(self.roomId) \(bookmarks)")
         
         if bookmarks.contains(self.roomId) {
             bookmarks.removeAll { target in
@@ -65,7 +64,6 @@ class RoomTableViewCell: UITableViewCell {
         }
         
         UserDefaults.standard.set(bookmarks, forKey: StringSet.UserDefaultKey.bookmark)
-        print("\(UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark))")
     }
     
     private func setupViews() {
