@@ -72,8 +72,8 @@ struct Room: Equatable {
 extension Room {
     static let Rooms: [Room] = [
         Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "10달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
-        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "11달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
-        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "12달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
-        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "13달러", isToiletShare: "true", bedCount: "3", isCarShare: "false")
+        Room(id: "1", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "11달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
+        Room(id: "2", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "12달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
+        Room(id: "3", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "13달러", isToiletShare: "true", bedCount: "3", isCarShare: "false")
     ]
 }
