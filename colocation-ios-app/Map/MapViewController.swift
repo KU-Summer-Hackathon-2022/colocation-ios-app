@@ -41,6 +41,11 @@ class MapViewController: UIViewController {
             let longitudeValue: Double = Double(room.longitudeValue)!
             addAnnotation(latitudeValue: latitudeValue, longitudeValue: longitudeValue, delta: 0.1, title: room.address, subtitle: room.type)
         }
+        
+        let initialCoordinate = CLLocationCoordinate2D(latitude: 37.520301, longitude: 126.887770)
+        mapView.setRegion(MKCoordinateRegion(center: initialCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
+        
+
     }
     
     func setupViews() {
@@ -48,7 +53,7 @@ class MapViewController: UIViewController {
         [listButton, mypageButton].forEach { mapView.addSubview($0) }
         
         mapView.delegate = self
-        
+        mapView.userTrackingMode = .follow
         mapView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }

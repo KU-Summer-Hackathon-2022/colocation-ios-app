@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     /// 웹뷰를 보여줍니다.
-    func showWebViewController(_ urlString: String) {
+    func showWebViewController(_ urlString: String, action: (() -> Void)? = nil) {
         let webViewController = WebViewController()
         webViewController.urlString = urlString
         let nav = UINavigationController(rootViewController: webViewController)
@@ -37,6 +37,11 @@ extension UIViewController {
     
     func showBookmarkViewController() {
         let vc = BookmarkViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showApplyRoomViewController() {
+        let vc = ApplyRoomViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

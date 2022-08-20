@@ -14,6 +14,7 @@ struct StringSet {
         
         static let authToken = "\(baseString).auth.token"
         static let bookmark = "\(baseString).bookmark"
+        static let applyRoom = "\(baseString).apply.room"
     }
     
     

@@ -44,6 +44,8 @@ class WebViewController: UIViewController {
         loadWebView()
         bind()
     }
+        
+    
     
     private func bind() {
         self.navigationItem.rightBarButtonItem?.rx.tap
@@ -75,6 +77,9 @@ class WebViewController: UIViewController {
                     self?.applyButton.backgroundColor = .gray
                     self?.applyButton.setTitle("🙌🏻 신청완료!", for: .disabled)
                     self?.view.backgroundColor = .gray
+                    let id = self?.urlString.components(separatedBy: "/").last
+                    print("✅ id \(id)")
+                    UserDefaults.standard.set([id], forKey: StringSet.UserDefaultKey.applyRoom)
                 }
                 
                 alertController.addAction(confirmAction)
@@ -106,9 +111,6 @@ class WebViewController: UIViewController {
         
         webView.addSubview(applyButton)
         
-        applyButton.setTitle("신청하기", for: .normal)
-        
-        applyButton.backgroundColor = ColorSet.AppColor.primary
         applyButton.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
@@ -121,6 +123,34 @@ class WebViewController: UIViewController {
         print("🌿 \(#function)")
         
         setupNavigationBar()
+        updateApplyButton()
+    }
+    
+    func updateApplyButton() {
+        let applyRooms = UserDefaults.standard.array(
+            forKey: StringSet.UserDefaultKey.applyRoom
+        ) as? [String] ?? []
+        let id = self.urlString.components(separatedBy: "/").last!
+        print("✅ urlString- id \(id) \(applyRooms)")
+        
+        // FIXME: - contains가 오류가나서 어쩔 수 없이 급한대로
+        var isContain: Bool = false
+        applyRooms.forEach { str in
+            if str == id {
+                isContain = true
+            }
+        }
+        
+        if !isContain {
+            applyButton.isEnabled = true
+            applyButton.setTitle("신청하기", for: .normal)
+            applyButton.backgroundColor = ColorSet.AppColor.primary
+        } else {
+            applyButton.isEnabled = false
+            applyButton.backgroundColor = .gray
+            applyButton.setTitle("🙌🏻 신청완료!", for: .disabled)
+            view.backgroundColor = .gray
+        }
     }
     
     private func loadWebView() {

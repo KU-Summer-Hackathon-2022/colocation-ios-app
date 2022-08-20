@@ -35,6 +35,7 @@
 		B1E1580928B0B52300CACD60 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580828B0B52300CACD60 /* Setting.swift */; };
 		B1E1580E28B0D27700CACD60 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */; };
 		B1E1581228B106EB00CACD60 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1581128B106EB00CACD60 /* UIColor+.swift */; };
+		B1E6581228B172C000901B4C /* ApplyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6581128B172BF00901B4C /* ApplyRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B1E1580828B0B52300CACD60 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		B1E1581128B106EB00CACD60 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		B1E6581128B172BF00901B4C /* ApplyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				B1E1580728B0B33E00CACD60 /* Cell */,
 				B1C5418B28AFC12300DE2E32 /* Auth */,
 				B1E1580C28B0D1DA00CACD60 /* Bookmark */,
+				B1E6581328B172C400901B4C /* ApplyRoom */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -211,6 +214,14 @@
 				B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */,
 			);
 			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		B1E6581328B172C400901B4C /* ApplyRoom */ = {
+			isa = PBXGroup;
+			children = (
+				B1E6581128B172BF00901B4C /* ApplyRoomViewController.swift */,
+			);
+			path = ApplyRoom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				B1E157F528B06F7900CACD60 /* UIViewController+.swift in Sources */,
 				B1E157F128B05D1500CACD60 /* MapViewController.swift in Sources */,
 				B1E1580928B0B52300CACD60 /* Setting.swift in Sources */,
+				B1E6581228B172C000901B4C /* ApplyRoomViewController.swift in Sources */,
 				B1E1580128B0A81E00CACD60 /* ColorSet.swift in Sources */,
 				B1C5416328AFB7B900DE2E32 /* AppDelegate.swift in Sources */,
 				B1E157FE28B0A25600CACD60 /* Room.swift in Sources */,

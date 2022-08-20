@@ -48,6 +48,8 @@ class MyPageTableViewController: UIViewController {
                     self.showAuthViewController()
                 } else if row == 1 {
                     self.showBookmarkViewController()
+                } else if row == 2 {
+                    self.showApplyRoomViewController()
                 }
             }
             .disposed(by: disposeBag)
