@@ -43,7 +43,7 @@ class MyPageTableViewController: UIViewController {
             .bind { [weak self] indexPath in
                 guard let self = self else { return }
                 let row = indexPath.row
-                 
+                
                 if row == 0 {
                     self.showAuthViewController()
                 } else if row == 1 {

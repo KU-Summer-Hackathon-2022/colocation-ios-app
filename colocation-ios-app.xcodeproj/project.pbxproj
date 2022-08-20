@@ -34,7 +34,6 @@
 		B1E1580628B0B33800CACD60 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580528B0B33800CACD60 /* MyPageTableViewCell.swift */; };
 		B1E1580928B0B52300CACD60 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580828B0B52300CACD60 /* Setting.swift */; };
 		B1E1580E28B0D27700CACD60 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */; };
-		B1E1581028B0FF9000CACD60 /* BookmarkViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580F28B0FF9000CACD60 /* BookmarkViewCell.swift */; };
 		B1E1581228B106EB00CACD60 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1581128B106EB00CACD60 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		B1E1580528B0B33800CACD60 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 		B1E1580828B0B52300CACD60 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
-		B1E1580F28B0FF9000CACD60 /* BookmarkViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewCell.swift; sourceTree = "<group>"; };
 		B1E1581128B106EB00CACD60 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */,
-				B1E1580F28B0FF9000CACD60 /* BookmarkViewCell.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -311,7 +308,6 @@
 				B1E1580128B0A81E00CACD60 /* ColorSet.swift in Sources */,
 				B1C5416328AFB7B900DE2E32 /* AppDelegate.swift in Sources */,
 				B1E157FE28B0A25600CACD60 /* Room.swift in Sources */,
-				B1E1581028B0FF9000CACD60 /* BookmarkViewCell.swift in Sources */,
 				B1E1580328B0AD0500CACD60 /* MyPageTableViewController.swift in Sources */,
 				B1E1580E28B0D27700CACD60 /* BookmarkViewController.swift in Sources */,
 				B1E157F828B0935D00CACD60 /* RoomTableViewController.swift in Sources */,
