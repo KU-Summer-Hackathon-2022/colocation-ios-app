@@ -23,10 +23,14 @@
 		B1C5418A28AFC10500DE2E32 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B1C5418928AFC10500DE2E32 /* SnapKit */; };
 		B1C5418D28AFC13000DE2E32 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5418C28AFC13000DE2E32 /* AuthViewController.swift */; };
 		B1C5418F28AFE21800DE2E32 /* StringSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5418E28AFE21800DE2E32 /* StringSet.swift */; };
-		B1C5419228AFE2D300DE2E32 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5419128AFE2D300DE2E32 /* Map.swift */; };
-		B1C5419628AFEBAC00DE2E32 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5419528AFEBAC00DE2E32 /* Annotation.swift */; };
-		B1C5419828AFEBC100DE2E32 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5419728AFEBC100DE2E32 /* AnnotationView.swift */; };
 		B1E157F128B05D1500CACD60 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157F028B05D1500CACD60 /* MapViewController.swift */; };
+		B1E157F328B06DD100CACD60 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157F228B06DD100CACD60 /* WebViewController.swift */; };
+		B1E157F528B06F7900CACD60 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157F428B06F7900CACD60 /* UIViewController+.swift */; };
+		B1E157F828B0935D00CACD60 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157F728B0935D00CACD60 /* RoomTableViewController.swift */; };
+		B1E157FC28B096C600CACD60 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157FB28B096C600CACD60 /* RoomTableViewCell.swift */; };
+		B1E157FE28B0A25600CACD60 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157FD28B0A25600CACD60 /* Room.swift */; };
+		B1E1580128B0A81E00CACD60 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580028B0A81E00CACD60 /* ColorSet.swift */; };
+		B1E1580328B0AD0500CACD60 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580228B0AD0400CACD60 /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +44,14 @@
 		B1C5417628AFBF9B00DE2E32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1C5418C28AFC13000DE2E32 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B1C5418E28AFE21800DE2E32 /* StringSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSet.swift; sourceTree = "<group>"; };
-		B1C5419128AFE2D300DE2E32 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		B1C5419528AFEBAC00DE2E32 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
-		B1C5419728AFEBC100DE2E32 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		B1E157F028B05D1500CACD60 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B1E157F228B06DD100CACD60 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B1E157F428B06F7900CACD60 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		B1E157F728B0935D00CACD60 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		B1E157FB28B096C600CACD60 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		B1E157FD28B0A25600CACD60 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		B1E1580028B0A81E00CACD60 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		B1E1580228B0AD0400CACD60 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +94,12 @@
 			children = (
 				B1C5416228AFB7B900DE2E32 /* AppDelegate.swift */,
 				B1C5416428AFB7B900DE2E32 /* SceneDelegate.swift */,
+				B1E157F628B07A4100CACD60 /* WebView */,
+				B1E157F928B0936100CACD60 /* Room */,
 				B1C5419328AFE2D800DE2E32 /* Map */,
 				B1C5418B28AFC12300DE2E32 /* Auth */,
+				B1E1580428B0AE5600CACD60 /* MyPage */,
+				B1E157FF28B0A25800CACD60 /* Model */,
 				B1C5419028AFE21B00DE2E32 /* Commons */,
 				B1C5419C28AFEF9A00DE2E32 /* Extension */,
 				B1C5416B28AFB7BC00DE2E32 /* Assets.xcassets */,
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C5418E28AFE21800DE2E32 /* StringSet.swift */,
+				B1E1580028B0A81E00CACD60 /* ColorSet.swift */,
 			);
 			name = Commons;
 			sourceTree = "<group>";
@@ -117,9 +130,6 @@
 		B1C5419328AFE2D800DE2E32 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				B1C5419128AFE2D300DE2E32 /* Map.swift */,
-				B1C5419528AFEBAC00DE2E32 /* Annotation.swift */,
-				B1C5419728AFEBC100DE2E32 /* AnnotationView.swift */,
 				B1E157F028B05D1500CACD60 /* MapViewController.swift */,
 			);
 			path = Map;
@@ -129,8 +139,50 @@
 			isa = PBXGroup;
 			children = (
 				B1A5B19528B0058B00AD58E4 /* NSObject+.swift */,
+				B1E157F428B06F7900CACD60 /* UIViewController+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B1E157F628B07A4100CACD60 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B1E157F228B06DD100CACD60 /* WebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		B1E157F928B0936100CACD60 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				B1E157F728B0935D00CACD60 /* RoomTableViewController.swift */,
+				B1E157FA28B095B700CACD60 /* Cell */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		B1E157FA28B095B700CACD60 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B1E157FB28B096C600CACD60 /* RoomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B1E157FF28B0A25800CACD60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1E157FD28B0A25600CACD60 /* Room.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1E1580428B0AE5600CACD60 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1580228B0AD0400CACD60 /* MyPageViewController.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,14 +271,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1C5419228AFE2D300DE2E32 /* Map.swift in Sources */,
 				B1C5418D28AFC13000DE2E32 /* AuthViewController.swift in Sources */,
 				B1C5418F28AFE21800DE2E32 /* StringSet.swift in Sources */,
-				B1C5419828AFEBC100DE2E32 /* AnnotationView.swift in Sources */,
+				B1E157F528B06F7900CACD60 /* UIViewController+.swift in Sources */,
 				B1E157F128B05D1500CACD60 /* MapViewController.swift in Sources */,
+				B1E1580128B0A81E00CACD60 /* ColorSet.swift in Sources */,
 				B1C5416328AFB7B900DE2E32 /* AppDelegate.swift in Sources */,
+				B1E157FE28B0A25600CACD60 /* Room.swift in Sources */,
+				B1E1580328B0AD0500CACD60 /* MyPageViewController.swift in Sources */,
+				B1E157F828B0935D00CACD60 /* RoomTableViewController.swift in Sources */,
+				B1E157FC28B096C600CACD60 /* RoomTableViewCell.swift in Sources */,
+				B1E157F328B06DD100CACD60 /* WebViewController.swift in Sources */,
 				B1A5B19628B0058B00AD58E4 /* NSObject+.swift in Sources */,
-				B1C5419628AFEBAC00DE2E32 /* Annotation.swift in Sources */,
 				B1C5416528AFB7B900DE2E32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

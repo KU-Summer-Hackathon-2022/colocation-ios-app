@@ -11,15 +11,21 @@ import SnapKit
 import RxSwift
 
 class MapViewController: UIViewController {
+    let disposeBag = DisposeBag()
     
+    // MARK: - Properties
     let locationManager = CLLocationManager()
     
+    // MARK: - Views
     let mapView = MKMapView()
+    let listButton = UIButton()
+    let mypageButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
+        bind()
         
         locationManager.startUpdatingLocation()
         
@@ -29,11 +35,30 @@ class MapViewController: UIViewController {
     
     func setupViews() {
         [mapView].forEach { view.addSubview($0) }
+        [listButton].forEach { mapView.addSubview($0) }
+        
         mapView.delegate = self
         
         mapView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        listButton.setImage(UIImage(systemName: "list.triangle"), for: .normal)
+        listButton.setTitle(" 목록보기", for: .normal)
+        listButton.setTitleColor(.darkGray, for: .normal)
+        listButton.backgroundColor = .green
+        listButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(100)
+            $0.trailing.equalToSuperview().inset(30)
+        }
+    }
+    
+    func bind() {
+        listButton.rx.tap
+            .bind { [weak self] _ in
+                self?.showRoomTableViewController()
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -98,5 +123,13 @@ extension MapViewController {
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("didSelect:: \(mapView)")
+        
+        showWebViewController("https://www.google.com")
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        print(annotation.title)
+        
+        return nil
     }
 }
