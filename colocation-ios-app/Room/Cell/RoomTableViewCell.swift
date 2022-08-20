@@ -40,6 +40,7 @@ class RoomTableViewCell: UITableViewCell {
         priceLabel.text = item.price
         adressLabel.text = item.address
         typeLabel.text = item.type
+        updateLikeButton()
     }
     
     private func bind() {
@@ -50,6 +51,19 @@ class RoomTableViewCell: UITableViewCell {
                 self.bookmark()
             }
             .disposed(by: disposeBag)
+    }
+    
+    private func updateLikeButton() {
+        var bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
+        
+        if bookmarks.contains(self.roomId) {
+            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            likeButton.tintColor = UIColor(rgb: 0x005691)
+        } else {
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            likeButton.tintColor = UIColor(rgb: 0x005691)
+        }
+        
     }
     
     private func bookmark() {
@@ -64,6 +78,7 @@ class RoomTableViewCell: UITableViewCell {
         }
         
         UserDefaults.standard.set(bookmarks, forKey: StringSet.UserDefaultKey.bookmark)
+        updateLikeButton()
     }
     
     private func setupViews() {
