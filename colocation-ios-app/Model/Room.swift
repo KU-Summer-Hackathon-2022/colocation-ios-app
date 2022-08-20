@@ -22,7 +22,8 @@ import Foundation
  - 카쉐어링
  */
 
-struct Room {
+struct Room: Equatable {
+    var id: String // 고유 아이디
     var address: String // 국가
     var latitudeValue: String // 위도
     var longitudeValue: String // 경도
@@ -35,8 +36,11 @@ struct Room {
     var bedCount: String // 침대 갯수
     var isCarShare: String // 카쉐어링 여부
     
+    var isLike: Bool = false // 좋아요 여부
+    
     init(
-        country: String,
+        id: String,
+        address: String,
         latitudeValue: String,
         longitudeValue: String,
         imageString: String,
@@ -46,9 +50,11 @@ struct Room {
         price: String,
         isToiletShare: String,
         bedCount: String,
-        isCarShare: String
+        isCarShare: String,
+        isLike: Bool = false
     ) {
-        self.address = country
+        self.id = id
+        self.address = address
         self.latitudeValue = latitudeValue
         self.longitudeValue = longitudeValue
         self.imageString = imageString
@@ -59,15 +65,15 @@ struct Room {
         self.isToiletShare = isToiletShare
         self.bedCount = bedCount
         self.isCarShare = isCarShare
+        self.isLike = isLike
     }
-    
 }
 
 extension Room {
     static let Rooms: [Room] = [
-        Room(country: "국가", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "16", price: "13달러", isToiletShare: "true", bedCount: "1", isCarShare: "false"),
-        Room(country: "국가", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "16", price: "13달러", isToiletShare: "true", bedCount: "1", isCarShare: "false"),
-        Room(country: "국가", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "16", price: "13달러", isToiletShare: "true", bedCount: "1", isCarShare: "false"),
-        Room(country: "국가", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "16", price: "13달러", isToiletShare: "true", bedCount: "1", isCarShare: "false")
+        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "10달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
+        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "11달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
+        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "12달러", isToiletShare: "true", bedCount: "3", isCarShare: "false"),
+        Room(id: "0", address: "국가는", latitudeValue: "37.556876", longitudeValue: "126.914066", imageString: "", gender: "boy", type: "빌라", roomSize: "15", price: "13달러", isToiletShare: "true", bedCount: "3", isCarShare: "false")
     ]
 }

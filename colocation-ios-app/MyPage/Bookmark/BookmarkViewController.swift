@@ -1,27 +1,24 @@
 //
-//  ListViewController.swift
+//  BookmarkViewController.swift
 //  colocation-ios-app
 //
 //  Created by Hamlit Jason on 2022/08/20.
 //
 
 import UIKit
-import SnapKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import SnapKit
 
-class RoomTableViewController: UIViewController {
+class BookmarkViewController: UIViewController {
+    let disposeBag = DisposeBag()
     
-    // MARK: - Properties
-    var rooms: [Room] = Room.Rooms
+    var bookmarks: [Room] = Room.Rooms
     
-    // MARK: - Views
     let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTableView()        
     }
     
     func setupTableView() {
@@ -42,9 +39,9 @@ class RoomTableViewController: UIViewController {
     }
 }
 
-extension RoomTableViewController: UITableViewDelegate, UITableViewDataSource {
+extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        rooms.count
+        bookmarks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +50,7 @@ extension RoomTableViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as? RoomTableViewCell else { return UITableViewCell() }
         
-        cell.setUI(item: rooms[indexPath.row])
+        cell.setUI(item: bookmarks[indexPath.row])
                 
         return cell
     }

@@ -30,7 +30,11 @@
 		B1E157FC28B096C600CACD60 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157FB28B096C600CACD60 /* RoomTableViewCell.swift */; };
 		B1E157FE28B0A25600CACD60 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E157FD28B0A25600CACD60 /* Room.swift */; };
 		B1E1580128B0A81E00CACD60 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580028B0A81E00CACD60 /* ColorSet.swift */; };
-		B1E1580328B0AD0500CACD60 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580228B0AD0400CACD60 /* MyPageViewController.swift */; };
+		B1E1580328B0AD0500CACD60 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580228B0AD0400CACD60 /* MyPageTableViewController.swift */; };
+		B1E1580628B0B33800CACD60 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580528B0B33800CACD60 /* MyPageTableViewCell.swift */; };
+		B1E1580928B0B52300CACD60 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580828B0B52300CACD60 /* Setting.swift */; };
+		B1E1580E28B0D27700CACD60 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */; };
+		B1E1581028B0FF9000CACD60 /* BookmarkViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1580F28B0FF9000CACD60 /* BookmarkViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +55,11 @@
 		B1E157FB28B096C600CACD60 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		B1E157FD28B0A25600CACD60 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		B1E1580028B0A81E00CACD60 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
-		B1E1580228B0AD0400CACD60 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		B1E1580228B0AD0400CACD60 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
+		B1E1580528B0B33800CACD60 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		B1E1580828B0B52300CACD60 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		B1E1580F28B0FF9000CACD60 /* BookmarkViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +103,8 @@
 				B1C5416228AFB7B900DE2E32 /* AppDelegate.swift */,
 				B1C5416428AFB7B900DE2E32 /* SceneDelegate.swift */,
 				B1E157F628B07A4100CACD60 /* WebView */,
-				B1E157F928B0936100CACD60 /* Room */,
 				B1C5419328AFE2D800DE2E32 /* Map */,
-				B1C5418B28AFC12300DE2E32 /* Auth */,
+				B1E157F928B0936100CACD60 /* Room */,
 				B1E1580428B0AE5600CACD60 /* MyPage */,
 				B1E157FF28B0A25800CACD60 /* Model */,
 				B1C5419028AFE21B00DE2E32 /* Commons */,
@@ -173,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				B1E157FD28B0A25600CACD60 /* Room.swift */,
+				B1E1580828B0B52300CACD60 /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,9 +188,29 @@
 		B1E1580428B0AE5600CACD60 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				B1E1580228B0AD0400CACD60 /* MyPageViewController.swift */,
+				B1E1580228B0AD0400CACD60 /* MyPageTableViewController.swift */,
+				B1E1580728B0B33E00CACD60 /* Cell */,
+				B1C5418B28AFC12300DE2E32 /* Auth */,
+				B1E1580C28B0D1DA00CACD60 /* Bookmark */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		B1E1580728B0B33E00CACD60 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1580528B0B33800CACD60 /* MyPageTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B1E1580C28B0D1DA00CACD60 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1580D28B0D27700CACD60 /* BookmarkViewController.swift */,
+				B1E1580F28B0FF9000CACD60 /* BookmarkViewCell.swift */,
+			);
+			path = Bookmark;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,14 +299,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E1580628B0B33800CACD60 /* MyPageTableViewCell.swift in Sources */,
 				B1C5418D28AFC13000DE2E32 /* AuthViewController.swift in Sources */,
 				B1C5418F28AFE21800DE2E32 /* StringSet.swift in Sources */,
 				B1E157F528B06F7900CACD60 /* UIViewController+.swift in Sources */,
 				B1E157F128B05D1500CACD60 /* MapViewController.swift in Sources */,
+				B1E1580928B0B52300CACD60 /* Setting.swift in Sources */,
 				B1E1580128B0A81E00CACD60 /* ColorSet.swift in Sources */,
 				B1C5416328AFB7B900DE2E32 /* AppDelegate.swift in Sources */,
 				B1E157FE28B0A25600CACD60 /* Room.swift in Sources */,
-				B1E1580328B0AD0500CACD60 /* MyPageViewController.swift in Sources */,
+				B1E1581028B0FF9000CACD60 /* BookmarkViewCell.swift in Sources */,
+				B1E1580328B0AD0500CACD60 /* MyPageTableViewController.swift in Sources */,
+				B1E1580E28B0D27700CACD60 /* BookmarkViewController.swift in Sources */,
 				B1E157F828B0935D00CACD60 /* RoomTableViewController.swift in Sources */,
 				B1E157FC28B096C600CACD60 /* RoomTableViewCell.swift in Sources */,
 				B1E157F328B06DD100CACD60 /* WebViewController.swift in Sources */,

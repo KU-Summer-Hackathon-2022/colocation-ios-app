@@ -11,7 +11,7 @@ import SnapKit
 
 class WebViewController: UIViewController {
     // MARK: - Properties
-    var urlString = "https://shareroof.netlify.app/"
+    var urlString = "https://shareroof.netlify.app/houses/1"
     
     // MARK: - Views
     let webView = WKWebView()

@@ -13,6 +13,7 @@ struct StringSet {
         fileprivate static let baseString = "com.ios.colocation"
         
         static let authToken = "\(baseString).auth.token"
+        static let bookmark = "\(baseString).bookmark"
     }
     
     

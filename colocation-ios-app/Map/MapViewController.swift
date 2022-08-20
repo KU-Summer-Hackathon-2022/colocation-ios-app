@@ -35,7 +35,7 @@ class MapViewController: UIViewController {
     
     func setupViews() {
         [mapView].forEach { view.addSubview($0) }
-        [listButton].forEach { mapView.addSubview($0) }
+        [listButton, mypageButton].forEach { mapView.addSubview($0) }
         
         mapView.delegate = self
         
@@ -51,12 +51,28 @@ class MapViewController: UIViewController {
             $0.top.equalToSuperview().offset(100)
             $0.trailing.equalToSuperview().inset(30)
         }
+
+        mypageButton.setImage(UIImage(systemName: "person.circle"), for: .normal)
+        mypageButton.setTitle(" 마이페이지", for: .normal)
+        mypageButton.setTitleColor(.darkGray, for: .normal)
+        mypageButton.backgroundColor = .green
+        mypageButton.snp.makeConstraints {
+            $0.top.equalTo(listButton.snp.bottom).offset(20)
+            $0.trailing.equalToSuperview().inset(30)
+        }
+        
     }
     
     func bind() {
         listButton.rx.tap
             .bind { [weak self] _ in
                 self?.showRoomTableViewController()
+            }
+            .disposed(by: disposeBag)
+        
+        mypageButton.rx.tap
+            .bind { [weak self] _ in
+                self?.showMyPageTableViewController()
             }
             .disposed(by: disposeBag)
     }

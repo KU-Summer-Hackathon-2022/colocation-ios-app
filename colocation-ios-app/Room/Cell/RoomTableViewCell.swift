@@ -11,16 +11,23 @@ import RxSwift
 import RxCocoa
 
 class RoomTableViewCell: UITableViewCell {
+    
+    let disposeBag = DisposeBag()
+    
+    var roomId: String = ""
+    var isLike: Bool = false
     // 이미지, 가격, 주소, 유형
     let thumbnailImageView = UIImageView()
     let priceLabel = UILabel()
     let adressLabel = UILabel()
     let typeLabel = UILabel()
+    let likeButton = UIButton()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupViews()
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -28,14 +35,38 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     func setUI(item: Room) {
+        roomId = item.id
         thumbnailImageView.image = UIImage(named: "item.imageString")
         priceLabel.text = item.price
         adressLabel.text = item.address
         typeLabel.text = item.type
     }
     
+    private func bind() {
+        likeButton.rx.tap
+            .debug("✅ ")
+            .bind { [weak self] _ in
+                guard let self = self else { return }
+                self.bookmark()
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func bookmark() {
+        var bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
+        
+        if bookmarks.contains(self.roomId) {
+            bookmarks.removeAll { target in
+                target == self.roomId
+            }
+        } else {
+            bookmarks.append(self.roomId)
+        }
+        UserDefaults.standard.set(bookmarks, forKey: StringSet.UserDefaultKey.bookmark)
+    }
+    
     private func setupViews() {
-        [thumbnailImageView, priceLabel, adressLabel, typeLabel].forEach { contentView.addSubview($0) }
+        [thumbnailImageView, priceLabel, adressLabel, typeLabel, likeButton].forEach { contentView.addSubview($0) }
         
         thumbnailImageView.image = UIImage()
         thumbnailImageView.backgroundColor = .gray
@@ -69,7 +100,11 @@ class RoomTableViewCell: UITableViewCell {
             $0.leading.equalTo(thumbnailImageView.snp.trailing).offset(10)
         }
         
-        
-
+        likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        likeButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(15)
+            $0.top.equalToSuperview().offset(40)
+            
+        }
     }
 }

@@ -22,4 +22,19 @@ extension UIViewController {
         let vc = RoomTableViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func showMyPageTableViewController() {
+        let vc = MyPageTableViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAuthViewController() {
+        let vc = AuthViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showBookmarkViewController() {
+        let vc = BookmarkViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

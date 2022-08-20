@@ -33,17 +33,26 @@ class AuthViewController: UIViewController {
         signupButton.rx.tap
             .debug("안녕하세요.")
             .bind { [weak self] in
-                
+                guard let self = self else { return }
+                self.signUp()
             }
             .disposed(by: disposeBag)
     }
     
     private func signUp() {
         // 이메일과 패스워드 가지고 진행
-        
-        
-        
-        
+        let alertController = UIAlertController(
+            title: nil,
+            message: "🥳 환영합니다. ",
+            preferredStyle: .alert
+        )
+        let confirmAction = UIAlertAction(
+            title: "OK",
+            style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+        alertController.addAction(confirmAction)
+        self.present(alertController, animated: true)
     }
 }
 
@@ -86,16 +95,3 @@ extension AuthViewController {
     }
 }
 
-//함께하는 사회를 위한 서비스.
-//노인과 청년이 함께하는 사회를 위한 서비스를 기획한 핫식스 팀의 리더 이건우입니다.
-//
-//저희는 고령화 시대에 발생하는 문제와 지금 저와 여러분처럼 학교에 다니시는 분들의 문제에 집중했습니다.
-/*
- 프랑스의 코르카시옹은 1인 고령세대의 거주 공간에 주거지 마련의 어려움을 겪는 청년세대를 입주시키는 정책입니다.
- 
- 홀로사는 어르신들은 고립과 고독 그리고 외로움을 해결하고
- , 청년들을 주거비용 문제와 어른들의 지혜를 습득할 수 있는
- 서비스를 준비하고 있습니다.
- 
- 
- */
