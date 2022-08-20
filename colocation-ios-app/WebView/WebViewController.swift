@@ -71,7 +71,7 @@ class WebViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        self.navigationItem.title = "Share Roof"
+        self.navigationItem.title = "숙소 상세 페이지"
         self.navigationController?.navigationBar.backgroundColor = ColorSet.AppColor.primary
         let id = self.urlString.components(separatedBy: "/").last!
         if bookmarks.contains(id) {

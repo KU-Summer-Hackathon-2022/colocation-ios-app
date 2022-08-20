@@ -81,7 +81,7 @@ class MapViewController: UIViewController {
         listButton.tintColor = ColorSet.AppColor.tertiary
         listButton.snp.makeConstraints {
             $0.top.equalTo(mypageButton.snp.bottom).offset(20)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(	20)
             $0.height.width.equalTo(50)
         }
         listButton.layer.cornerRadius = 25
@@ -173,5 +173,5 @@ extension MapViewController: MKMapViewDelegate {
         }
         mapView.setCenter(annotation.coordinate, animated: true)
         showWebViewController("https://shareroof.netlify.app/houses/\(annotationId)")
-    }    
+    }
 }

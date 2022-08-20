@@ -37,7 +37,7 @@ class RoomTableViewCell: UITableViewCell {
     func setUI(item: Room) {
         roomId = item.id
         thumbnailImageView.image = UIImage(named: item.imageString)
-        priceLabel.text = item.price
+        priceLabel.text = item.price + "원"
         adressLabel.text = item.address
         typeLabel.text = item.type
         
@@ -57,11 +57,16 @@ class RoomTableViewCell: UITableViewCell {
     private func updateLikeButton() {
         let bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
         
+        
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .light)
+        
         if bookmarks.contains(self.roomId) {
-            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            let image = UIImage(systemName: "heart.fill", withConfiguration: imageConfig)
+            likeButton.setImage(image, for: .normal)
             likeButton.tintColor = UIColor(rgb: 0x005691)
         } else {
-            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            let image = UIImage(systemName: "heart", withConfiguration: imageConfig)
+            likeButton.setImage(image, for: .normal)
             likeButton.tintColor = UIColor(rgb: 0x005691)
         }
         

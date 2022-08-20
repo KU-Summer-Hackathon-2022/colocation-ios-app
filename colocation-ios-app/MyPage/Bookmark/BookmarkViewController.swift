@@ -13,9 +13,8 @@ import SnapKit
 class BookmarkViewController: UIViewController {
     let disposeBag = DisposeBag()
     
-    var bookmarks: [Room] {
-        get { transformBookmarks() }
-    }
+    var rooms: [Room] = Room.makeServerRooms()
+    var bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
     
     let tableView = UITableView()
     
@@ -54,13 +53,14 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as? RoomTableViewCell else { return UITableViewCell() }
         
-        cell.setUI(item: bookmarks[indexPath.row])
+        cell.selectionStyle = .none
+        cell.setUI(item: transformBookmarks()[indexPath.row])
         
         return cell
     }
     
     private func transformBookmarks() -> [Room] {
-        let rooms: [Room] = Room.Rooms
+        let rooms: [Room] = Room.makeServerRooms()
         let bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []
         
         var result = [Room]()

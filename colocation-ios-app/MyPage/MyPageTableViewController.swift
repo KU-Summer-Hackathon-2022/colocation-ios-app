@@ -69,6 +69,7 @@ extension MyPageTableViewController: UITableViewDelegate, UITableViewDataSource 
             for: indexPath
         ) as? MyPageTableViewCell else { return UITableViewCell() }
         
+        cell.selectionStyle = .none
         cell.setUI(item: Setting.settings[indexPath.row])
         
         return cell

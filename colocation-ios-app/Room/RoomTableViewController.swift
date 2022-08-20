@@ -53,6 +53,7 @@ extension RoomTableViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as? RoomTableViewCell else { return UITableViewCell() }
         
+        cell.selectionStyle = .none
         cell.setUI(item: rooms[indexPath.row])
                 
         return cell
