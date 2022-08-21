@@ -10,7 +10,7 @@
 
  해커톤의 기간은 다음과 같습니다.
 
- - 해커톤 기간: 2022.08.19 16:00 ~ 2022.08.21 17:00****
+ - 해커톤 기간: 2022.08.19 16:00 ~ 2022.08.21 17:00
  - 개발 기간: 2022.08.19 23:00 ~ 2022.08.21 12:00
  
 ### 개발환경
@@ -29,11 +29,14 @@
  - RxSwift 6.5.0 이상
  - SnapKit 5.6.0 이상
 
-
 ### 기능
  - 지도의 Annotation을 통해 장소를 바로 알 수 있어요.
  - 지도의 핀을 클릭하면 상세 페이지를 확인할 수 있어요.
  - 상세 페이지에서 해당 숙소를 신청할 수 있어요.
  - 내가 원하던 정보를 북마크로 모아서 관리할 수 있어요.
 
-# 코드 스타일 가이드 | [https://github.com/StyleShare/swift-style-guide](StyleShareswift-style-guide)
+### 코드 스타일 가이드 | [https://github.com/StyleShare/swift-style-guide](StyleShareswift-style-guide)
+
+### 해당 프로젝트의 개발자
+
+- [🐻‍❄️](https://github.com/lgvv)****
