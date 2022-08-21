@@ -22,6 +22,16 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if UserDefaults.standard.string(
+            forKey: StringSet.UserDefaultKey.authToken
+        ) != nil {
+            navigationController?.popViewController(animated: true)
+            let alertController = UIAlertController(title: "이미 가입한 사용자입니다.", message: nil, preferredStyle: .alert)
+            let confirmAction = UIAlertAction(title: "확인", style: .default)
+            alertController.addAction(confirmAction)
+            self.present(alertController, animated: true)
+        }
+        
         setupEmailField()
         setupPasswordField()
         setupSignupButton()
@@ -42,14 +52,15 @@ class AuthViewController: UIViewController {
     private func signUp() {
         // 이메일과 패스워드 가지고 진행
         let alertController = UIAlertController(
-            title: nil,
-            message: "🥳 환영합니다. ",
+            title: "환영합니다!",
+            message: "🥳 ShareRoof의 일원이 되신것을 축하드려요! ",
             preferredStyle: .alert
         )
         let confirmAction = UIAlertAction(
             title: "OK",
             style: .default) { _ in
                 self.navigationController?.popViewController(animated: true)
+                UserDefaults.standard.set("authToken", forKey: StringSet.UserDefaultKey.authToken)
             }
         alertController.addAction(confirmAction)
         self.present(alertController, animated: true)
@@ -82,9 +93,10 @@ extension AuthViewController {
     private func setupSignupButton() {
         view.addSubview(signupButton)
         
-        signupButton.setTitle("✨ 회원가입 ✨", for: .normal)
-        signupButton.setTitleColor(.black, for: .normal)
+        signupButton.setTitle(" ✨ 회원가입 ✨ ", for: .normal)
+//        signupButton.setTitleColor(., for: .normal)
         signupButton.layer.borderColor = .init(gray: 1.0, alpha: 1.0)
+        signupButton.layer.cornerRadius = 16
         signupButton.layer.borderWidth = 1.5
         signupButton.clipsToBounds = true
         

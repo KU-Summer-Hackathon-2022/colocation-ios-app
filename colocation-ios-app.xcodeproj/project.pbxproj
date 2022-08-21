@@ -469,6 +469,9 @@
 				DEVELOPMENT_TEAM = 38PD5AHVVF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "colocation-ios-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ShareRoof;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "더 세심한 서비스 제공을 위해 사용자 위치정보 동의가 필요해요.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "더 세심한 서비스 제공을 위해 사용자 위치정보 동의가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -496,6 +499,9 @@
 				DEVELOPMENT_TEAM = 38PD5AHVVF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "colocation-ios-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ShareRoof;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "더 세심한 서비스 제공을 위해 사용자 위치정보 동의가 필요해요.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "더 세심한 서비스 제공을 위해 사용자 위치정보 동의가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
