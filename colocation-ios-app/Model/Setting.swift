@@ -16,6 +16,6 @@ extension Setting {
         Setting(title: "🍁 로그인 및 회원가입"),
         Setting(title: "🍁 관심목록"),
         Setting(title: "🍁 예약현황"),
-        Setting(title: "🍁 후기작성"),
+//        Setting(title: "🍁 후기작성"),
     ]
 }
