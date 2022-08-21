@@ -59,6 +59,10 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showWebViewController("https://shareroof.netlify.app/houses/\(rooms[indexPath.row].id)")
+    }
+    
     private func transformBookmarks() -> [Room] {
         let rooms: [Room] = Room.makeServerRooms()
         let bookmarks = UserDefaults.standard.array(forKey: StringSet.UserDefaultKey.bookmark) as? [String] ?? []

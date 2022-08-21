@@ -78,6 +78,6 @@ extension MyPageTableViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "딩동댕"
+        "정보"
     }
 }

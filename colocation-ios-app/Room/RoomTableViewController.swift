@@ -47,6 +47,10 @@ extension RoomTableViewController: UITableViewDelegate, UITableViewDataSource {
         rooms.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showWebViewController("https://shareroof.netlify.app/houses/\(rooms[indexPath.row].id)")
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: RoomTableViewCell.identifier,
