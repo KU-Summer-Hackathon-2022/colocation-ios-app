@@ -4,6 +4,13 @@
 
 ### 해당 프로젝트는 2022 KU SUMMER HACKATHON iOS 파트 결과물입니다.
 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/56182112/187043487-e23f9e69-e913-4083-b8c0-d2c90e5c41b7.PNG" width="24%"/>
+ <img src="https://user-images.githubusercontent.com/56182112/187043485-31a01e8d-5e64-4ebb-9ab1-93c65f9d2dc2.PNG" width="24%"/>
+ <img src="https://user-images.githubusercontent.com/56182112/187043481-94bd7cdb-c10c-4ba3-997a-066986e85ac5.PNG" width="24%"/>
+ <img src="https://user-images.githubusercontent.com/56182112/187043469-343a7a72-e221-4598-8f1b-813a8495e80a.PNG" width="24%"/>
+</p>
+
  - [해커톤 상세페이지](https://connecthon.com/home)
 
 ### 기간
